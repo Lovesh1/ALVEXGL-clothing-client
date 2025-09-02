@@ -369,6 +369,19 @@ const App = () => {
             </div>
           </div>
 
+          <div className="mt-16 text-center">
+  <h2 className="text-3xl font-semibold mb-6 text-gray-800">Meet Our Founder</h2>
+  <div className="max-w-2xl mx-auto">
+  
+    <h3 className="text-xl font-semibold mb-2 text-gray-800">Monu Sharma</h3>
+    <p className="text-gray-600 italic mb-4">Founder & Creative Director</p>
+    <p className="text-gray-600">
+      "With over 15 years in the fashion industry, I founded ALVEXGL with a vision 
+      to create sustainable, premium clothing that doesn't compromise on style or comfort."
+    </p>
+  </div>
+</div>
+
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <h3 className="text-xl font-semibold mb-2 text-gray-800">Premium Textiles</h3>
@@ -425,7 +438,7 @@ const App = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">Address</h3>
-                    <p className="text-gray-600">123 Fashion Street, Mumbai, Maharashtra 400001</p>
+                    <p className="text-gray-600">Sr 14 acharaya vinoba bhave nagar </p>
                   </div>
                 </div>
               </div>
