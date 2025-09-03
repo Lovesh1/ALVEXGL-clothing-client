@@ -7,6 +7,11 @@ const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
+   const changePage = (page) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   // Sample product data
   const products = [
     {
@@ -797,7 +802,7 @@ const ContactPage = () => (
           <h4 className="font-semibold mb-4">Customer Service</h4>
           <ul className="space-y-2 text-gray-300">
             <li><a href="#" className="hover:text-white">Size Guide</a></li>
-            <li><button onClick={() => setCurrentPage('return-policy')} className="hover:text-white text-left">Return Policy</button></li>
+            <li><button onClick={() => changePage('return-policy')} className="hover:text-white text-left">Return Policy</button></li>
             <li><a href="#" className="hover:text-white">Shipping Info</a></li>
             <li><a href="#" className="hover:text-white">FAQ</a></li>
           </ul>
