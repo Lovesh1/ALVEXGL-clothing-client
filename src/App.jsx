@@ -1,5 +1,5 @@
 import React, { useState, } from 'react';
-import { ShoppingCart, User, Menu, X, Plus, Minus, Star, Heart, Search, Phone, Mail, MapPin } from 'lucide-react';
+import { ShoppingCart, User, Menu, X, Plus, Minus, Star, Heart, Search, Phone, Mail, MapPin} from 'lucide-react';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -126,7 +126,7 @@ const App = () => {
               onClick={() => setCurrentPage('home')}
             >
               ALVEXGL
-            </h1>
+            </h1>f
           </div>
           
           <nav className="hidden md:flex space-x-8">
@@ -251,8 +251,18 @@ const App = () => {
           </div>
           <button 
             onClick={() => addToCart(product)}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
-          >
+            className="
+          relative
+          bg-gradient-to-b from-blue-500 to-blue-700 
+          hover:from-blue-600 hover:to-blue-800
+          active:from-blue-700 active:to-blue-900
+          text-white font-semibold
+          px-6 py-3 rounded-lg
+          border-2 border-blue-800 border-b-4
+          shadow-lg hover:shadow-xl
+          active:transform active:translate-y-1 active:shadow-sm active:border-b-2
+          transition-all duration-150 ease-in-out
+        ">
             Add to Cart
           </button>
         </div>
@@ -341,149 +351,166 @@ const App = () => {
     </div>
   );
 
-  const AboutPage = () => (
-    <div className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">About ALVEXGL</h1>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=400&fit=crop" 
-                alt="Textile Craftsmanship" 
-                className="rounded-lg shadow-lg"
-              />
-            </div>
-            <div>
-              <h2 className="text-2xl font-semibold mb-4 text-gray-800">Our Story</h2>
-              <p className="text-gray-600 mb-4">
-                Founded with a passion for exceptional clothing, ALVEXGL has been crafting premium garments that combine traditional textile craftsmanship with contemporary design. Our journey began with a simple mission: to create clothing that doesn't just look sophisticated, but feels incredible to wear.
-              </p>
-              <p className="text-gray-600 mb-4">
-                Every garment in our collection is carefully selected and crafted using the finest textiles. From organic cotton shirts to luxurious cashmere sweaters, we ensure each product meets our high standards of quality, comfort, and sustainability.
-              </p>
-              <p className="text-gray-600">
-                We believe that exceptional clothing is an investment in your comfort, confidence, and personal style. That's why we're committed to delivering garments that exceed your expectations and become treasured pieces in your wardrobe for years to come.
-              </p>
-            </div>
+ const AboutPage = () => (
+  <div className="py-16">
+    <div className="container mx-auto px-4">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">About ALVEXGL</h1>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <img 
+              src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=400&fit=crop" 
+              alt="Textile Craftsmanship" 
+              className="rounded-lg shadow-lg"
+            />
           </div>
+          <div>
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Our Story</h2>
+            <p className="text-gray-600 mb-4">
+              Founded with a passion for exceptional clothing, ALVEXGL has been crafting premium garments that combine traditional textile craftsmanship with contemporary design. Our journey began with a simple mission: to create clothing that doesn't just look sophisticated, but feels incredible to wear.
+            </p>
+            <p className="text-gray-600 mb-4">
+              Every garment in our collection is carefully selected and crafted using the finest textiles. From organic cotton shirts to luxurious cashmere sweaters, we ensure each product meets our high standards of quality, comfort, and sustainability.
+            </p>
+            <p className="text-gray-600">
+              We believe that exceptional clothing is an investment in your comfort, confidence, and personal style. That's why we're committed to delivering garments that exceed your expectations and become treasured pieces in your wardrobe for years to come.
+            </p>
+          </div>
+        </div>
 
-          <div className="mt-16 text-center">
-  <h2 className="text-3xl font-semibold mb-6 text-gray-800">Meet Our Founder</h2>
-  <div className="max-w-2xl mx-auto">
-  
-    <h3 className="text-xl font-semibold mb-2 text-gray-800">Monu Sharma</h3>
-    <p className="text-gray-600 italic mb-4">Founder & Creative Director</p>
-    <p className="text-gray-600">
-      "With over 15 years in the fashion industry, I founded ALVEXGL with a vision 
-      to create sustainable, premium clothing that doesn't compromise on style or comfort."
-    </p>
-  </div>
-</div>
+        <div className="mt-16 text-center">
+          <h2 className="text-3xl font-semibold mb-6 text-gray-800">Meet Our Founder</h2>
+          <div className="max-w-2xl mx-auto">
+            <h3 className="text-xl font-semibold mb-2 text-gray-800">Monu Sharma</h3>
+            <p className="text-gray-600 italic mb-4">Founder & Creative Director</p>
+            <p className="text-gray-600">
+              "With over 15 years in the fashion industry, I founded ALVEXGL with a vision 
+              to create sustainable, premium clothing that doesn't compromise on style or comfort."
+            </p>
+          </div>
+        </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800">Premium Textiles</h3>
-              <p className="text-gray-600">We source only the finest fabrics including organic cotton, merino wool, and sustainable bamboo</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800">Expert Tailoring</h3>
-              <p className="text-gray-600">Each garment is meticulously crafted by skilled artisans with attention to every detail</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800">Sustainable Fashion</h3>
-              <p className="text-gray-600">Your style and our planet's wellbeing are equally important to us</p>
-            </div>
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <h3 className="text-xl font-semibold mb-2 text-gray-800">Premium Textiles</h3>
+            <p className="text-gray-600">We source only the finest fabrics including organic cotton, merino wool, and sustainable bamboo</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-2 text-gray-800">Expert Tailoring</h3>
+            <p className="text-gray-600">Each garment is meticulously crafted by skilled artisans with attention to every detail</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-2 text-gray-800">Sustainable Fashion</h3>
+            <p className="text-gray-600">Your style and our planet's wellbeing are equally important to us</p>
           </div>
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 
-  const ContactPage = () => (
-    <div className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">Contact Us</h1>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-2xl font-semibold mb-6 text-gray-800">Get in Touch</h2>
+const ContactPage = () => (
+  <div className="py-16">
+    <div className="container mx-auto px-4">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">Contact Us</h1>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-800">Get in Touch</h2>
+            
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <User className="text-blue-600" size={20} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800">Proprietor</h3>
+                  <p className="text-gray-600">Monu Sharma</p>
+                </div>
+              </div>
               
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Phone className="text-blue-600" size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">Phone</h3>
-                    <p className="text-gray-600">+91 6367592980</p>
-                  </div>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Phone className="text-blue-600" size={20} />
                 </div>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Mail className="text-blue-600" size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">Email</h3>
-                    <p className="text-gray-600">Alvexgl1998@gmail.com</p>
-                  </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800">Phone</h3>
+                  <p className="text-gray-600">+91 6367592980</p>
                 </div>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    <MapPin className="text-blue-600" size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800">Address</h3>
-                    <p className="text-gray-600">Sr 14 acharaya vinoba bhave nagar </p>
-                  </div>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Mail className="text-blue-600" size={20} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800">Email</h3>
+                  <p className="text-gray-600">Alvexgl1998@gmail.com</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <MapPin className="text-blue-600" size={20} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-800">Address</h3>
+                  <p className="text-gray-600">Sr 14 Acharya Vinoba Bhave Nagar<br></br> Jaipur, Rajasthan 302021 </p>
                 </div>
               </div>
             </div>
 
-            <div>
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                  <input 
-                    type="text" 
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <input 
-                    type="email" 
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea 
-                    rows="4" 
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your message..."
-                  ></textarea>
-                </div>
-                <button 
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                >
-                  Send Message
-                </button>
-              </form>
+            {/* Business Information Section */}
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <h3 className="text-lg font-semibold mb-4 text-gray-800">Business Information</h3>
+              <div className="text-gray-600 space-y-2 text-sm">
+                <p><span className="font-medium">Company:</span> ALVEXGL Textiles Private Limited</p>
+                <p><span className="font-medium">PAN Number:</span> ABDCA0404H</p>
+              </div>
             </div>
+          </div>
+
+          <div>
+            <form className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                <input 
+                  type="text" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                <input 
+                  type="email" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <textarea 
+                  rows="4" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your message..."
+                ></textarea>
+              </div>
+              <button 
+                type="submit"
+                className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </div>
-  );
-
+  </div>
+);
   const CartPage = () => (
     <div className="py-8">
       <div className="container mx-auto px-4">
@@ -569,6 +596,101 @@ const App = () => {
     </div>
   );
 
+  const ReturnPolicyPage = () => (
+  <div className="py-16">
+    <div className="container mx-auto px-4">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Return & Exchange Policy</h1>
+        <p className="text-center text-gray-600 mb-12 text-lg">
+          Your satisfaction is our priority. We want you to love your ALVEXGL purchase.
+        </p>
+
+        {/* Quick Overview */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="text-center p-6 bg-blue-50 rounded-lg">
+            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">⏰</span>
+            </div>
+            <h3 className="font-semibold text-gray-800 mb-2">30-Day Window</h3>
+            <p className="text-gray-600 text-sm">Return or exchange within 30 days of delivery</p>
+          </div>
+          <div className="text-center p-6 bg-green-50 rounded-lg">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">🔄</span>
+            </div>
+            <h3 className="font-semibold text-gray-800 mb-2">Easy Exchange</h3>
+            <p className="text-gray-600 text-sm">Simple size or color exchanges available</p>
+          </div>
+          <div className="text-center p-6 bg-purple-50 rounded-lg">
+            <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">🛡️</span>
+            </div>
+            <h3 className="font-semibold text-gray-800 mb-2">Quality Guarantee</h3>
+            <p className="text-gray-600 text-sm">Full refund for defective items</p>
+          </div>
+        </div>
+
+        {/* Return Process */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-semibold mb-6 text-gray-800">How to Return Items</h2>
+          
+          <div className="space-y-6">
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                1
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800 mb-2">Contact Us</h3>
+                <p className="text-gray-600">
+                  Email us at <span className="text-blue-600">Alvexgl1998@gmail.com</span> or call 
+                  <span className="text-blue-600"> +91 6367592980</span> with your order number and reason for return.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                2
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800 mb-2">Get Return Authorization</h3>
+                <p className="text-gray-600">
+                  We'll provide you with a return authorization number and shipping instructions within 24 hours.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                3
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800 mb-2">Ship the Package</h3>
+                <p className="text-gray-600">
+                  Send to: <strong>ALVEXGL, Sr 14 Acharya Vinoba Bhave Nagar, Jaipur, Rajasthan 302021</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="bg-gray-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Need Help?</h2>
+          <p className="text-gray-600 mb-6">
+            Our customer service team is here to help with your return or exchange.
+          </p>
+          <div className="space-y-2 text-gray-700">
+            <p><strong>Email:</strong> Alvexgl1998@gmail.com</p>
+            <p><strong>Phone:</strong> +91 6367592980</p>
+            <p><strong>Business Hours:</strong> Monday - Saturday, 10 AM - 7 PM IST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
   const ProductModal = ({ product, onClose }) => (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto">
@@ -632,85 +754,86 @@ const App = () => {
   );
 
   const Footer = () => (
-    <footer className="bg-gray-800 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">ALVEXGL</h3>
-            <p className="text-gray-300 mb-4">Premium clothing crafted with passion and precision.</p>
-            <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center cursor-pointer">
-                <span className="text-xs">f</span>
-              </div>
-              <div className="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center cursor-pointer">
-                <span className="text-xs">t</span>
-              </div>
-              <div className="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center cursor-pointer">
-                <span className="text-xs">i</span>
-              </div>
+  <footer className="bg-gray-800 text-white py-12">
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 className="text-xl font-bold mb-4">ALVEXGL</h3>
+          <p className="text-gray-300 mb-4">Premium clothing crafted with passion and precision.</p>
+          <div className="flex space-x-4">
+            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center cursor-pointer">
+              <span className="text-xs">f</span>
             </div>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><button onClick={() => setCurrentPage('home')} className="hover:text-white">Home</button></li>
-              <li><button onClick={() => setCurrentPage('collection')} className="hover:text-white">Collection</button></li>
-              <li><button onClick={() => setCurrentPage('about')} className="hover:text-white">About Us</button></li>
-              <li><button onClick={() => setCurrentPage('contact')} className="hover:text-white">Contact</button></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">Categories</h4>
-           <ul className="space-y-2 text-gray-300">
-  <li><a href="#" className="hover:text-white">Shirts</a></li>
-  <li><a href="#" className="hover:text-white">Sweaters</a></li>
-  <li><a href="#" className="hover:text-white">T-Shirts</a></li>
-  <li><a href="#" className="hover:text-white">Polo Shirts</a></li>
-</ul>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">Customer Service</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-white">Size Guide</a></li>
-              <li><a href="#" className="hover:text-white">Return Policy</a></li>
-              <li><a href="#" className="hover:text-white">Shipping Info</a></li>
-              <li><a href="#" className="hover:text-white">FAQ</a></li>
-            </ul>
+            <div className="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center cursor-pointer">
+              <span className="text-xs">t</span>
+            </div>
+            <div className="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center cursor-pointer">
+              <span className="text-xs">i</span>
+            </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2025 ALVEXGL. All rights reserved.</p>
+        <div>
+          <h4 className="font-semibold mb-4">Quick Links</h4>
+          <ul className="space-y-2 text-gray-300">
+            <li><button onClick={() => setCurrentPage('home')} className="hover:text-white">Home</button></li>
+            <li><button onClick={() => setCurrentPage('collection')} className="hover:text-white">Collection</button></li>
+            <li><button onClick={() => setCurrentPage('about')} className="hover:text-white">About Us</button></li>
+            <li><button onClick={() => setCurrentPage('contact')} className="hover:text-white">Contact</button></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 className="font-semibold mb-4">Categories</h4>
+         <ul className="space-y-2 text-gray-300">
+            <li><a href="#" className="hover:text-white">Shirts</a></li>
+            <li><a href="#" className="hover:text-white">Sweaters</a></li>
+            <li><a href="#" className="hover:text-white">T-Shirts</a></li>
+            <li><a href="#" className="hover:text-white">Polo Shirts</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 className="font-semibold mb-4">Customer Service</h4>
+          <ul className="space-y-2 text-gray-300">
+            <li><a href="#" className="hover:text-white">Size Guide</a></li>
+            <li><button onClick={() => setCurrentPage('return-policy')} className="hover:text-white text-left">Return Policy</button></li>
+            <li><a href="#" className="hover:text-white">Shipping Info</a></li>
+            <li><a href="#" className="hover:text-white">FAQ</a></li>
+          </ul>
         </div>
       </div>
-    </footer>
-  );
-
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
       
-      <main>
-        {currentPage === 'home' && <HomePage />}
-        {currentPage === 'collection' && <CollectionPage />}
-        {currentPage === 'about' && <AboutPage />}
-        {currentPage === 'contact' && <ContactPage />}
-        {currentPage === 'cart' && <CartPage />}
-      </main>
-
-      <Footer />
-
-      {selectedProduct && (
-        <ProductModal 
-          product={selectedProduct} 
-          onClose={() => setSelectedProduct(null)} 
-        />
-      )}
+      <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+        <p>&copy; 2025 ALVEXGL. All rights reserved.</p>
+      </div>
     </div>
-  );
+  </footer>
+);
+
+return (
+  <div className="min-h-screen bg-gray-50">
+    <Header />
+    
+    <main>
+      {currentPage === 'home' && <HomePage />}
+      {currentPage === 'collection' && <CollectionPage />}
+      {currentPage === 'about' && <AboutPage />}
+      {currentPage === 'contact' && <ContactPage />}
+      {currentPage === 'cart' && <CartPage />}
+      {currentPage === 'return-policy' && <ReturnPolicyPage />}
+    </main>
+
+    <Footer />
+
+    {selectedProduct && (
+      <ProductModal 
+        product={selectedProduct} 
+        onClose={() => setSelectedProduct(null)} 
+      />
+    )}
+  </div>
+);
 };
 
 export default App;
