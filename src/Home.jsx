@@ -1148,7 +1148,7 @@ const ContactPage = () => (
           <ul className="space-y-2 text-gray-300">
             <li><a href="#" className="hover:text-white">Size Guide</a></li>
             <li><button onClick={() => changePage('return-policy')} className="hover:text-white text-left">Return Policy</button></li>
-            <li><a href="#" onClick={() => changePage('terms-conditions')} className="hover:text-white">Terms & Conditions</a></li>
+            <li><a href="/privacy-policy" onClick={() => changePage('terms-conditions')} className="hover:text-white">Terms & Conditions</a></li>
             <li><a href="#" className="hover:text-white">FAQ</a></li>
           </ul>
         </div>
