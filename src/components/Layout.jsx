@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Layout = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentPage, ] = useState('home');
+  const [currentPage, setCurrentPage] = useState('home');
   const [cart, ] = useState([]);
 
   const Header = () => (
@@ -28,24 +28,28 @@ const Layout = () => {
           <nav className="hidden md:flex space-x-8">
             <Link 
               to="/" 
+              onClick={() => setCurrentPage('home')}
               className={`font-medium ${currentPage === 'home' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
             >
               Home
             </Link>
             <Link 
               to="/collection"
+              onClick={() => setCurrentPage('collection')}
               className={`font-medium ${currentPage === 'collection' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
             >
               Collection
             </Link>
             <Link
         to="/about" 
+        onClick={() => setCurrentPage('about')}
               className={`font-medium ${currentPage === 'about' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
             >
               About Us
             </Link>
              <Link
         to="/contact"
+              onClick={() => setCurrentPage('contact')} 
               className={`font-medium ${currentPage === 'contact' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
             >
               Contact
